@@ -8,6 +8,16 @@
   --bt-line: #2b2b2b;
 }
 
+/* Guarantee a black background everywhere (overscroll edges, short pages)
+   even if a section's color scheme ever resolves differently. */
+html {
+  background-color: #050505;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+}
+
 /* Sticky header: subtle blur once it re-appears while scrolling */
 .shopify-section-header-sticky .header-wrapper {
   -webkit-backdrop-filter: blur(6px);
