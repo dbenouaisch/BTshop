@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #050505;
+  --panel: #0d0d0d;
+  --line: #2b2b2b;
+  --bone: #f2f1ea;
+  --white: #ffffff;
+  --grey: #8a8a84;
+  --gothic: 'Pirata One', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--black);
+  color: var(--bone);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+
+/* ---------- BANNER (preview notice) ---------- */
+.preview-banner {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  font-size: 13px;
+  color: var(--grey);
+  padding: 10px 16px;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(6px);
+}
+nav .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 76px;
+}
+.brand {
+  font-family: var(--gothic);
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+.nav-links { display: flex; gap: 36px; }
+.nav-links a {
+  font-size: 14px;
+  color: var(--bone);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+.nav-links a:hover, .nav-links a.active { opacity: 1; }
+.nav-cart {
+  font-size: 14px;
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+}
+.nav-cart:hover { border-color: var(--bone); }
+
+@media (max-width: 760px) {
+  .nav-links { display: none; }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 120px 32px 96px;
+  text-align: center;
+}
+.badge-ring {
+  width: 260px; height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  margin: 0 auto 40px;
+  display: flex; align-items: center; justify-content: center;
+}
+.badge-ring-inner {
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-logo { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+.hero h1, .page-title {
+  font-family: var(--gothic);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+.hero h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+.hero .tagline {
+  font-size: 17px;
+  color: var(--grey);
+  margin-bottom: 44px;
+}
+.hero-ctas, .cta-buttons {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: 1px solid var(--bone);
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-fill { background: var(--bone); color: var(--black); }
+.btn-fill:hover { background: var(--white); }
+.btn-outline { background: transparent; color: var(--bone); }
+.btn-outline:hover { background: var(--bone); color: var(--black); }
+
+/* ---------- INTRO / RICH TEXT ---------- */
+.intro { padding: 8px 32px 100px; text-align: center; }
+.intro p {
+  max-width: 620px; margin: 0 auto;
+  font-size: 17px; line-height: 1.7; color: var(--bone); opacity: 0.85;
+}
+.intro .read-more {
+  display: inline-block; margin-top: 24px; font-size: 14px;
+  border-bottom: 1px solid var(--line); padding-bottom: 2px;
+}
+.intro .read-more:hover { border-color: var(--bone); }
+
+/* ---------- PAGE HEADER (Le Club / Mission / Boutique) ---------- */
+.page-header {
+  padding: 100px 32px 40px;
+  text-align: center;
+}
+.page-title { font-size: clamp(36px, 5.5vw, 56px); margin: 0 auto 20px; }
+.page-header .lede {
+  max-width: 620px; margin: 0 auto; font-size: 17px; line-height: 1.7;
+  color: var(--bone); opacity: 0.85;
+}
+
+/* ---------- ARTICLE BLOCKS (story pages) ---------- */
+.article-block {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  text-align: center;
+}
+.article-block h2 {
+  font-family: var(--gothic);
+  font-weight: 400;
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 24px;
+}
+.article-block p {
+  font-size: 15px; line-height: 1.8; color: var(--grey);
+  margin-bottom: 18px;
+}
+.article-block p:last-child { margin-bottom: 0; }
+
+/* ---------- SECTION LABEL ---------- */
+.section-head {
+  padding: 0 32px;
+  max-width: 1120px; margin: 0 auto 44px;
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 1px solid var(--line); padding-bottom: 20px;
+}
+.section-head h2 {
+  font-family: var(--gothic); font-size: 30px; font-weight: 400; letter-spacing: 0.5px;
+}
+.section-head a { font-size: 13px; color: var(--grey); }
+.section-head a:hover { color: var(--bone); }
+
+/* ---------- FILTERS (boutique) ---------- */
+.filters {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  padding: 0 32px 56px;
+}
+.filter-pill {
+  font-size: 13px; border: 1px solid var(--line); padding: 8px 18px; color: var(--grey);
+}
+.filter-pill.active { border-color: var(--bone); color: var(--bone); }
+
+/* ---------- PRODUCTS ---------- */
+.products { padding: 0 0 100px; }
+.products.no-top-pad { padding-top: 0; }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  max-width: 1120px; margin: 0 auto;
+}
+.product-card {
+  background: var(--black);
+  padding: 48px 28px 32px;
+  text-align: center;
+}
+.product-icon { width: 84px; height: 84px; margin: 0 auto 32px; }
+.product-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.product-card .price { font-size: 14px; color: var(--grey); }
+
+@media (max-width: 760px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- MISSION PANEL ---------- */
+.mission { padding: 0 32px 120px; }
+.mission-panel {
+  max-width: 1120px; margin: 0 auto;
+  border: 1px solid var(--line);
+  padding: 80px 60px; text-align: center;
+}
+.mission-panel .eyebrow-ring {
+  width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%;
+  margin: 0 auto 32px;
+}
+.mission-panel h2 {
+  font-family: var(--gothic); font-size: 32px; font-weight: 400;
+  max-width: 560px; margin: 0 auto 24px; line-height: 1.3;
+}
+.mission-panel p {
+  max-width: 540px; margin: 0 auto 36px; color: var(--grey); line-height: 1.7; font-size: 15px;
+}
+
+@media (max-width: 760px) {
+  .mission-panel { padding: 56px 24px; }
+}
+
+/* ---------- FOOTER ---------- */
+footer { border-top: 1px solid var(--line); padding: 64px 32px 40px; }
+.footer-grid {
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px;
+}
+.footer-brand { font-family: var(--gothic); font-size: 20px; margin-bottom: 12px; }
+.footer-col p.label { font-size: 12px; color: var(--grey); margin-bottom: 16px; letter-spacing: 0.4px; }
+.footer-col a { display: block; font-size: 14px; color: var(--bone); opacity: 0.8; margin-bottom: 12px; }
+.footer-col a:hover { opacity: 1; }
+.footer-bottom {
+  max-width: 1120px; margin: 56px auto 0; padding-top: 24px;
+  border-top: 1px solid var(--line); font-size: 12px; color: var(--grey);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+
+@media (max-width: 760px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
