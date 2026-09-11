@@ -1,0 +1,221 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="hero-badge-section color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width hero-badge">
+    <div
+      class="hero-badge__ring{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+        style="--animation-order: 1;"
+      {% endif %}
+    >
+      <div class="hero-badge__ring-inner">
+        {%- if section.settings.logo != blank -%}
+          {{
+            section.settings.logo
+            | image_url: width: 480
+            | image_tag: loading: 'lazy', widths: '160, 240, 320, 480', class: 'hero-badge__logo'
+          }}
+        {%- else -%}
+          <img
+            src="{{ 'logo-biker-tov.png' | asset_url }}"
+            alt="{{ shop.name }}"
+            class="hero-badge__logo"
+            width="240"
+            height="240"
+            loading="lazy"
+          >
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <h1
+            class="hero-badge__heading {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            {{ block.settings.heading }}
+          </h1>
+        {%- when 'text' -%}
+          <p
+            class="hero-badge__tagline{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 3;"
+            {% endif %}
+          >
+            {{ block.settings.text }}
+          </p>
+        {%- when 'buttons' -%}
+          <div
+            class="hero-badge__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 4;"
+            {% endif %}
+          >
+            {%- if block.settings.button_label_1 != blank -%}
+              <a
+                {% if block.settings.button_link_1 == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_link_1 }}"
+                {% endif %}
+                class="button button--primary"
+              >
+                {{- block.settings.button_label_1 | escape -}}
+              </a>
+            {%- endif -%}
+            {%- if block.settings.button_label_2 != blank -%}
+              <a
+                {% if block.settings.button_link_2 == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_link_2 }}"
+                {% endif %}
+                class="button button--secondary"
+              >
+                {{- block.settings.button_label_2 | escape -}}
+              </a>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bannière avec badge",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo (badge rond)",
+      "info": "Si aucune image n'est choisie, le logo par défaut du thème est utilisé."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Palette de couleurs",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Marges de la section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge haute",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge basse",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Titre",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Biker Tov MC — Pantin",
+          "label": "Titre"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Accroche",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Rouler pour la route. Rouler pour les autres.",
+          "label": "Texte"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Boutons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Découvrir la boutique",
+          "label": "Bouton 1 — libellé"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Bouton 1 — lien"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Notre histoire",
+          "label": "Bouton 2 — libellé"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Bouton 2 — lien"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bannière avec badge",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "buttons" }
+      ]
+    }
+  ]
+}
+{% endschema %}

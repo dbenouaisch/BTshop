@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "header": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Notre histoire",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": ["heading"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 20
+      }
+    },
+    "body-1": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Une étincelle entre passion et foi",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tout commence le 17 juin 2012. Inspiré par l'esprit de liberté de la culture motarde et par les enseignements de transmission du mouvement Loubavitch, Rudi, le fondateur des Bikers Tov, a une vision audacieuse : réunir les motards juifs autour d'une passion commune pour la route tout en renforçant leur attachement à la foi et aux mitzvot. De cette volonté de chercher chaque frère là où il se trouve est née l'aventure des Bikers Tov.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "body-2": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "L'esprit du gilet et nos valeurs",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le nom « Tov », qui signifie « bon » en hébreu, incarne l'esprit positif et bienveillant qui anime le club. Notre logo, fièrement arboré sur nos blousons en cuir, mêle les codes des bikers traditionnels aux symboles de notre identité religieuse : les tzitzit, les tefillin et la barbe. Au bas de nos gilets est gravée notre devise guidante : « Hine Ma Tov U'Ma Na'im Shevet Achim Gam Yachad » (Qu'il est bon pour des frères d'être ensemble).</p><p>Chez les Bikers Tov, la fraternité ne connaît pas de frontière d'âge ou de milieu. De 21 à 67 ans, nos membres viennent de tous les horizons — directeurs d'entreprise, taxis moto, artisans ou indépendants. Mais dès le moteur allumé, nous ne formons plus qu'une seule et même famille.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "body-3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Roulage, respect et engagements",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tailler la route avec les Bikers Tov, c'est concilier la liberté du grand air et le respect des traditions. Nos sorties s'articulent autour du respect strict du Shabbat et de la kasherout. Il n'est d'ailleurs pas rare de voir notre groupe faire une pause au bord d'une route, devant une ambassade ou lors d'une étape pour réciter la prière de Min'ha ensemble.</p><p>Au-delà des virées à moto, notre cœur de motard bat pour la solidarité. Qu'il s'agisse de soutenir la communauté, d'escorter des convois, de redonner le sourire à des enfants en situation de handicap ou de participer à la rédaction d'un Sefer Torah dédié au club, l'engagement caritatif fait partie intégrante de notre ADN.</p><p>Des routes de France jusqu'aux lieux de mémoire comme Auschwitz ou le Portugal, les Bikers Tov roulent la tête haute, fiers de leurs couleurs, de leur amitié et de leurs valeurs.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Rejoignez la route avec nous",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_label_2": "Soutenez-nous",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": ["button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": ["header", "body-1", "body-2", "body-3", "cta"]
+}

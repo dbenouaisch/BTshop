@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-badge",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Biker Tov MC — Pantin"
+          }
+        },
+        "tagline": {
+          "type": "text",
+          "settings": {
+            "text": "Rouler pour la route. Rouler pour les autres."
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Découvrir la boutique",
+            "button_link_1": "shopify://collections/all",
+            "button_label_2": "Notre histoire",
+            "button_link_2": "shopify://pages/le-club"
+          }
+        }
+      },
+      "block_order": ["heading", "tagline", "buttons"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 120,
+        "padding_bottom": 64
+      }
+    },
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Biker Tov MC est né à Pantin d'une envie de motards juifs de mettre leur passion au service des autres. Ici, la moto n'est pas qu'une passion — c'est un vecteur de solidarité. On roule pour nos frères et sœurs, on roule pour ceux qui en ont besoin.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lire notre histoire complète",
+            "button_link": "shopify://pages/le-club",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": ["text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Portez nos couleurs",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "mission": {
+      "type": "mission-panel",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Chaque achat a un sens"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chaque pièce portée soutient les actions du club — sorties solidaires, soutien aux familles, initiatives caritatives à Pantin et au-delà. Vous ne portez pas qu'un logo, vous soutenez un mouvement.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Notre mission",
+            "button_link": "shopify://pages/notre-mission"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "show_eyebrow": true,
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_bottom": 120
+      }
+    }
+  },
+  "order": ["hero", "intro", "featured_collection", "mission"]
+}

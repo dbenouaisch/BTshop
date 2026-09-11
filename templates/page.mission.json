@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "header": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rouler pour donner du sens",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La tsedaka est au cœur de tout ce qu'on fait. Chez Biker Tov MC, la solidarité n'est pas un supplément à notre passion — c'est sa raison d'être.</p><p>Chaque sortie organisée, chaque rassemblement, chaque kilomètre parcouru est pensé pour soutenir une cause, aider une famille, ou accompagner ceux qui traversent une épreuve. Rouler ensemble, c'est notre manière de rester unis — dans les bons moments comme dans les difficiles.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    },
+    "goodies": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "À quoi servent les ventes de goodies ?",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chaque t-shirt, casquette ou patch porté contribue directement aux engagements du club : escorter des convois, redonner le sourire à des enfants en situation de handicap, soutenir la communauté, ou encore participer à la rédaction d'un Sefer Torah dédié aux Bikers Tov.</p><p>En portant nos couleurs, vous ne portez pas qu'un logo — vous soutenez un mouvement qui allie liberté, communauté et bonnes actions.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Voir la boutique",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": ["button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": ["header", "goodies", "cta"]
+}

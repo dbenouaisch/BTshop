@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Biker Tov MC — reskin layer loaded after base.css
+   Dark gothic biker aesthetic on top of the Dawn theme engine.
+   ========================================================================== */
+
+:root {
+  --bt-grey: #8a8a84;
+  --bt-line: #2b2b2b;
+}
+
+/* Sticky header: subtle blur once it re-appears while scrolling */
+.shopify-section-header-sticky .header-wrapper {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.header__heading-link {
+  letter-spacing: 0.05rem;
+}
+
+/* ---------- Hero badge section ---------- */
+.hero-badge-section {
+  text-align: center;
+}
+
+.hero-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-badge__ring {
+  width: 220px;
+  height: 220px;
+  border: 1px solid var(--bt-line);
+  border-radius: 50%;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-badge__ring-inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-badge__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+@media screen and (min-width: 750px) {
+  .hero-badge__ring {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-badge__ring-inner {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.hero-badge__heading {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(3.6rem, 6vw, 6.8rem);
+  line-height: 1.1;
+  letter-spacing: 0.02rem;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.hero-badge__tagline {
+  font-size: 1.7rem;
+  color: var(--bt-grey);
+  letter-spacing: 0.03rem;
+  margin: 0 auto 44px;
+  max-width: 640px;
+}
+
+.hero-badge__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Mission panel section ---------- */
+.mission-panel {
+  max-width: 1120px;
+  margin: 0 auto;
+  border: 1px solid var(--bt-line);
+  padding: 80px 32px;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .mission-panel {
+    padding: 80px 60px;
+  }
+}
+
+.mission-panel__eyebrow-ring {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--bt-line);
+  border-radius: 50%;
+  margin: 0 auto 32px;
+}
+
+.mission-panel__heading {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  max-width: 560px;
+  margin: 0 auto 24px;
+  line-height: 1.3;
+}
+
+.mission-panel__text {
+  max-width: 540px;
+  margin: 0 auto 36px;
+  color: var(--bt-grey);
+  line-height: 1.7;
+  font-size: 1.5rem;
+}
+
+.mission-panel__text p {
+  margin: 0;
+}
+
+/* ---------- Section headings elsewhere (collections, pages) ---------- */
+.title,
+.collection-hero__title,
+.main-page-title {
+  letter-spacing: 0.02rem;
+}
