@@ -209,6 +209,21 @@ nav .wrap {
 .product-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
 .product-card .price { font-size: 14px; color: var(--grey); }
 
+.product-card.has-photo {
+  padding: 0 0 28px;
+}
+.product-photo {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+}
+.product-card.has-photo h3,
+.product-card.has-photo .price {
+  padding: 0 20px;
+}
+
 @media (max-width: 760px) {
   .product-grid { grid-template-columns: 1fr; }
 }
