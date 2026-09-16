@@ -153,7 +153,7 @@ body {
 
 /* ---------- Blog article featured image: align width with article text ---------- */
 .article-template__hero-container {
-  max-width: 72.6rem;
+  max-width: 72.6rem !important;
   padding: 0 1.5rem;
 }
 
