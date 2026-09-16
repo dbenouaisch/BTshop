@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "header": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Nos patchs",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le patch Biker Tov MC, c'est la marque de reconnaissance entre frères de la route — à coudre sur le blouson, le sac ou le gilet.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    },
+    "body": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bientôt disponibles",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nos patchs officiels arrivent prochainement dans la boutique. En attendant, contactez-nous directement si vous souhaitez vous en procurer un.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Nous contacter",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_label_2": "Voir la boutique",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": ["button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": ["header", "body", "cta"]
+}
