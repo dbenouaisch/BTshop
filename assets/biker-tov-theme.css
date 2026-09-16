@@ -151,6 +151,24 @@ body {
   margin: 0;
 }
 
+/* ---------- Blog article featured image: align width with article text ---------- */
+.article-template__hero-container {
+  max-width: 72.6rem;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__hero-container {
+    padding: 0 9rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .article-template__hero-container {
+    padding: 0;
+  }
+}
+
 /* ---------- Section headings elsewhere (collections, pages) ---------- */
 .title,
 .collection-hero__title,
