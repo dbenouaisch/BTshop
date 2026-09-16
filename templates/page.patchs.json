@@ -27,6 +27,13 @@
         "padding_bottom": 40
       }
     },
+    "content": {
+      "type": "page-content",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
     "cta": {
       "type": "rich-text",
       "blocks": {
@@ -53,5 +60,5 @@
       }
     }
   },
-  "order": ["header", "cta"]
+  "order": ["header", "content", "cta"]
 }
