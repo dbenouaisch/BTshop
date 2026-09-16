@@ -110,7 +110,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Chaque pièce portée soutient les actions du club — sorties solidaires, soutien aux familles, initiatives caritatives à Pantin et au-delà. Vous ne portez pas qu'un logo, vous soutenez un mouvement.</p>"
+            "text": "<p>Chaque pièce portée soutient les actions du club — sorties solidaires, soutien aux familles, initiatives caritatives .</p><p>Vous ne portez pas qu'un logo, vous soutenez un mouvement.</p>"
           }
         },
         "button": {
