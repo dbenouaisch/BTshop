@@ -98,6 +98,41 @@
         "padding_bottom": 80
       }
     },
+    "president_word": {
+      "type": "president-word",
+      "blocks": {
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>« Hine Ma Tov U'Ma Na'im Shevet Achim Gam Yachad » — qu'il est bon pour des frères d'être ensemble.</p>"
+          }
+        },
+        "signature": {
+          "type": "signature",
+          "settings": {
+            "name": "Roddy",
+            "title": "Fondateur & président, Biker Tov MC"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lire le mot du président",
+            "button_link": "shopify://pages/le-club"
+          }
+        }
+      },
+      "block_order": [
+        "quote",
+        "signature",
+        "button"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
     "mission": {
       "type": "mission-panel",
       "blocks": {
@@ -138,6 +173,7 @@
     "hero",
     "intro",
     "featured_collection",
+    "president_word",
     "mission"
   ]
 }
